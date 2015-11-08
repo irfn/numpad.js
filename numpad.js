@@ -1,5 +1,6 @@
+var shiftKeyPressed = false;
+
 document.addEventListener("DOMContentLoaded", function(event) {
-    var shiftKeyPressed = false;
     var iframe = document.createElement('iframe');
     iframe.id = "numpadIframe";
     var iframecss = "#numpadIframe {margin:0;padding: 0;width:149px;height: 192px; position: absolute; bottom: 0;right:0; border: none}";
