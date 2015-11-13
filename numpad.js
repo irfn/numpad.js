@@ -1,6 +1,6 @@
 var shiftKeyPressed = false;
 
-function numpad() {
+function numpad(options) {
         var iframe = document.createElement('iframe');
         iframe.id = "numpadIframe";
         var iframecss = "#numpadIframe {margin:0;padding: 0;width:149px;height: 192px; position: absolute; bottom: 0;right:0; border: none}";
@@ -33,6 +33,9 @@ function numpad() {
             kbKeys.forEach(function (id) {
                 doc.getElementById(id).onclick = function () {
                     triggerKeyboardEvent(document.body, id.charCodeAt(0));
+                    if(options.inputHandler) {
+                        options.inputHandler(id);
+                    }
                 }
             });
 
