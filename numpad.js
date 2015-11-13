@@ -32,9 +32,10 @@ function numpad(options) {
             doc.body.appendChild(style);
             kbKeys.forEach(function (id) {
                 doc.getElementById(id).onclick = function () {
-                    triggerKeyboardEvent(document.body, id.charCodeAt(0));
                     if(options.inputHandler) {
                         options.inputHandler(id);
+                    } else {
+                        triggerKeyboardEvent(document.body, id.charCodeAt(0));
                     }
                 }
             });
