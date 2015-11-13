@@ -1,7 +1,6 @@
 var shiftKeyPressed = false;
 
 function numpad() {
-    document.addEventListener("DOMContentLoaded", function () {
         var iframe = document.createElement('iframe');
         iframe.id = "numpadIframe";
         var iframecss = "#numpadIframe {margin:0;padding: 0;width:149px;height: 192px; position: absolute; bottom: 0;right:0; border: none}";
@@ -51,7 +50,6 @@ function numpad() {
             document.addEventListener("keyup", keyUp, false);
         };
         document.body.appendChild(iframe);
-    });
 }
 
 function keyUp(e) {
